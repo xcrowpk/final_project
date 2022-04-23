@@ -1,0 +1,15 @@
+{% block container_add_staff %}
+
+    <form action ="" method = "POST">{% csrf_token %}
+        <table>
+            {{ staff_form.as_table }}
+        </table>
+        <input type="submit", value="Agregar">
+    </form>
+
+    <br><br>
+    <a href="/mvt_app/">
+        <button class="btn btn-primary" type="submit">Back to home</button>
+    </a>
+
+{% endblock  %}

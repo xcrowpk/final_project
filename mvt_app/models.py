@@ -22,3 +22,13 @@ class Clients (models.Model):
     
     def __str__(self):
         return f"User: {self.user} - Name: {self.name} - Lastname: {self.lastname} - E-Mail {self.email}"
+    
+class Staff (models.Model):
+    
+    roll = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"Roll: {self.roll} - Name: {self.name} - Lastname: {self.lastname}"
+    

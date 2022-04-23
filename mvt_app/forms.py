@@ -8,3 +8,9 @@ class Register(forms.Form):
     name = forms.CharField(max_length=50)
     lastname = forms.CharField(max_length=50)
     email = forms.EmailField(max_length=50)
+    
+class Staff(forms.Form):
+    
+    roll = forms.CharField(max_length=50)
+    name = forms.CharField(max_length=50)
+    lastname = forms.CharField(max_length=50)
