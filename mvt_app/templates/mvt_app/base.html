@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        Probando probando
 
         {% load static %}
 
@@ -25,11 +24,15 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'index' %}">Index</a>´
-                <a class="navbar-brand" href="{% url '' %}"></a>
-                <a class="navbar-brand" href="{% url '' %}"></a>
-                <a class="navbar-brand" href="{% url '' %}"></a>
-                <a class="navbar-brand" href="{% url '' %}"></a>
+                <a class="navbar-brand" href="{% url 'index' %}">Index</a>
+                <a class="navbar-brand" href="{% url 'about_us' %}">About us</a>
+                <a class="navbar-brand" href="{% url 'add_clients' %}">Add clients</a>
+                <a class="navbar-brand" href="{% url 'add_staff' %}">Add staff</a>
+                <a class="navbar-brand" href="{% url 'contact_us' %}">Contact us</a>
+                <a class="navbar-brand" href="{% url 'search' %}">Search</a>
+                <a class="navbar-brand" href="{% url 'staff' %}">Staff</a>
+                <a class="navbar-brand" href="{% url 'view_clients' %}">View clients</a>
+                <a class="navbar-brand" href="{% url 'view_services' %}">View services</a>
                 <a class="btn btn-primary" href="#NADAAUN">INICIAR</a>
             </div>
         </nav>
