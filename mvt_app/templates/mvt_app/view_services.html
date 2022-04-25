@@ -8,11 +8,11 @@
 </head>
 <body>
     
-    {% block block %}
+    {% block block_services %}
 
         <ul>
-        {% for client in clients_list %}
-        <li>{{clients}}</li>
+        {% for service in services_list %}
+        <li>{{service}}</li>
         {% endfor %}
         </ul>
 
@@ -23,4 +23,5 @@
     {% endblock  %}
 </body>
 </html>
+
 

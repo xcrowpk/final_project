@@ -11,19 +11,19 @@ def index(request):
     return render(request, "mvt_app/index.html")
 
 #SERVICES
-def services(request):
+def view_services(request):
     
     services_list = Services.objects.all()
-    return render(request, "mvt_app/services.html", 
+    return render(request, "mvt_app/view_services.html", 
                   {'services_list':services_list})
     
 #def add_services(request):   
   
 #STAFF  
-def staff(request):
+def view_staff(request):
     
     staff_list = Staff.objects.all()
-    return render(request, "mvt_app/staff.html", 
+    return render(request, "mvt_app/view_staff.html", 
                   {'staff_list':staff_list})   
     
 def add_staff(request):
@@ -44,19 +44,19 @@ def add_staff(request):
         
      
 #CLIENTS
-def clients(request):
+def view_clients(request):
     
-    clients_list = Staff.objects.all()
-    return render(request, "mvt_app/clients.html", 
+    clients_list = Clients.objects.all()
+    return render(request, "mvt_app/view_clients.html", 
                   {'clients_list':clients_list}) 
 
 def add_clients(request):
     
     if request.method == 'POST':
-        form = Register(request.POST)
-        print(form)
-        if form.is_valid:   #Si pasó la validación de Django
-            info = form.cleaned_data
+        clients_form = Register(request.POST)
+        print(clients_form)
+        if clients_form.is_valid:   #Si pasó la validación de Django
+            info = clients_form.cleaned_data
             clients = Clients(user = info['user'],
                               name = info['name'],
                               lastname = info['lastname'],
@@ -64,6 +64,23 @@ def add_clients(request):
             clients.save()
             return render(request, "mvt_app/index.html") #Vuelvo al inicio o a donde quieran
     else:
-        form = Register()
-        return render(request, "mvt_app/add_clients.html", {"form":form})
+        clients_form = Register()
+        return render(request, "mvt_app/add_clients.html", {"clients_form":clients_form})
     
+#SEARCH
+"""def search(request):
+
+      if  request.GET["camada"]:
+
+	      #respuesta = f"Estoy buscando la camada nro: {request.GET['camada'] }" 
+            camada = request.GET['camada'] 
+            cursos = Curso.objects.filter(camada__icontains=camada)
+
+            return render(request, "AppCoder/inicio.html", {"cursos":cursos, "camada":camada})
+
+      else: 
+
+	      respuesta = "No enviaste datos"
+
+      #No olvidar from django.http import HttpResponse
+      return HttpResponse(respuesta)"""

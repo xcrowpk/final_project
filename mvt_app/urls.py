@@ -7,8 +7,8 @@ from mvt_app import views
 urlpatterns = [
     path('', views.index),
     path('add_clients/', views.add_clients),
-    path('services/', views.services),
-    path('staff/', views.staff),
+    path('view_services/', views.view_services),
+    path('staff/', views.view_staff),
     path('add_staff/', views.add_staff),
-    path('clients/', views.clients),
+    path('view_clients/', views.view_clients),
 ]

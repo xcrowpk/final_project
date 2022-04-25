@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVT</title>
-</head>
-<body>
+{% block block_index %}
+
    WELLCOME TO THE MVT_PROJECT
 
    <br><br>
@@ -16,7 +9,7 @@
 
    <br><br>
 
-   <a href="/mvt_app/clients">
+   <a href="/mvt_app/view_clients">
         <button class="btn btn-primary" type="submit">View Clients</button>
    </a>
 
@@ -27,14 +20,14 @@
 
    <br><br>
 
-   <a href="/mvt_app/services">
+   <a href="/mvt_app/view_services">
       <button class="btn btn-primary" type="submit">View Services</button>
    </a>
 
    <br><br>
 
    <a href="/mvt_app/staff">
-      <button class="btn btn-primary" type="submit">Staff</button>
+      <button class="btn btn-primary" type="submit">View Staff</button>
    </a>
 
    <br><br>
@@ -50,8 +43,5 @@
    </a>
 
    <br><br>
-    
 
-       
-</body>
-</html>
+{% endblock  %}
