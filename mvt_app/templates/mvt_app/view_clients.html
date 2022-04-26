@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    {% block block_clients %}
+{% extends 'mvt_app/base.html' %}
+{% load static %}
+
+{% block block_general %}
 
         <ul>
         {% for client in clients_list %}
-        <li>{{clients}}</li>
+        <li>{{client}}</li>
         {% endfor %}
         </ul>
 
@@ -20,7 +13,4 @@
         <a href="/mvt_app/">
         <button class="btn btn-primary" type="submit">Back to Home</button>
         </a>
-    {% endblock  %}
-</body>
-</html>
-
+{% endblock  %}

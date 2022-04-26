@@ -1,12 +1,16 @@
-{% block block_search_results %}
+{% extends 'mvt_app/base.html' %}
+{% load static %}
 
-    you searched for...{{searched}}
+{% block block_general %}
 
-    {% if searched %}
-        you searched for...{{searched}}
-    {% endif %}
+    {% for p in staff_info %}
+        {{staff_info}}
+    {% endfor %}
+
     
-
+    <br><br>
+        <a href="/mvt_app/">
+        <button class="btn btn-primary" type="submit">Back to Home</button>
+    </a>
     
-
 {% endblock  %}

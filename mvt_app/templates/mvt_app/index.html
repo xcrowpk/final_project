@@ -1,50 +1,8 @@
 {% extends 'mvt_app/base.html' %}
 {% load static %}
-{% block block_index %}
 
-   WELLCOME TO THE MVT_PROJECT
+{% block block_general %}
 
-   <br><br>
-   <a href="/admin">
-        <button class="btn btn-primary" type="submit">Admin</button>
-   </a>
-
-   <br><br>
-
-   <a href="/mvt_app/view_clients">
-        <button class="btn btn-primary" type="submit">View Clients</button>
-   </a>
-
-   <br><br>
-   <a href="/mvt_app/add_clients">
-      <button class="btn btn-primary" type="submit">Add Clients</button>
-   </a>
-
-   <br><br>
-
-   <a href="/mvt_app/view_services">
-      <button class="btn btn-primary" type="submit">View Services</button>
-   </a>
-
-   <br><br>
-
-   <a href="/mvt_app/staff">
-      <button class="btn btn-primary" type="submit">View Staff</button>
-   </a>
-
-   <br><br>
-
-   <a href="/mvt_app/add_staff">
-      <button class="btn btn-primary" type="submit">Add Staff</button>
-   </a>
-
-   <br><br>
-
-   <form action="{% url 'search_result' %}" method="POST" > {% csrf_token %}
-      <input type="Search" class="form" placeholder="search for staff" name="searched">
-      <input type="submit" value="find">
-   </form>
-   <br><br>
-
+ 
 
 {% endblock  %}

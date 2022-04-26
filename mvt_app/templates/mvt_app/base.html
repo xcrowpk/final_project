@@ -22,12 +22,19 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'index' %}">Index</a>
+                <a class="navbar-brand" href="{% url 'about_us' %}">About Us</a>
                 <a class="navbar-brand" href="{% url 'add_clients' %}">Add clients</a>
                 <a class="navbar-brand" href="{% url 'add_staff' %}">Add staff</a>
-                
-                <a class="navbar-brand" href="{% url 'view_staff' %}">Staff</a>
+                <a class="navbar-brand" href="{% url 'view_staff' %}">View Staff</a>
                 <a class="navbar-brand" href="{% url 'view_clients' %}">View clients</a>
                 <a class="navbar-brand" href="{% url 'view_services' %}">View services</a>
+
+                <form action="{% url 'search_staff' %}" method="POST" > {% csrf_token %}
+                    <input type="Search" class="form" placeholder="search for staff" name="searched">
+                    <input type="submit" value="find">
+                 </form>
+                 <br><br>
+              
                 <a class="btn btn-primary" href="#NADAAUN">INICIAR</a>
             </div>
         </nav>
@@ -38,7 +45,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Nuestra web Intermedia de Django - CoderHouse</h1>
+                            <h1 class="mb-5">DAC Soluciones Integrales</h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -53,7 +60,8 @@
             </div>
         </header>
         <!-- Esto es lo que va a cambiar-->
-        {% block block_index %}
+        {% block block_general %}
+
         {% endblock %}
         <!-- Footer-->
         <footer class="footer bg-light">

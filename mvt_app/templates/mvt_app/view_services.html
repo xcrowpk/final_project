@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    {% block block_services %}
+{% extends 'mvt_app/base.html' %}
+{% load static %}
 
-        <ul>
-        {% for service in services_list %}
-        <li>{{service}}</li>
-        {% endfor %}
-        </ul>
+{% block block_general %}
 
-        <br><br>
-        <a href="/mvt_app/">
-        <button class="btn btn-primary" type="submit">Back to Home</button>
-        </a>
-    {% endblock  %}
-</body>
-</html>
+    <ul>
+    {% for service in services_list %}
+    <li>{{service}}</li>
+    {% endfor %}
+    </ul>
 
-
+    <br><br>
+    <a href="/mvt_app/">
+    <button class="btn btn-primary" type="submit">Back to Home</button>
+    </a>
+{% endblock  %}
