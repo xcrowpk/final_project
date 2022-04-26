@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mvt_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Users/xcrow/Documents/PYTHON/mvt_project/final_project/mvt_app/templates/mvt_app'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

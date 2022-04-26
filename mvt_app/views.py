@@ -68,19 +68,16 @@ def add_clients(request):
         return render(request, "mvt_app/add_clients.html", {"clients_form":clients_form})
     
 #SEARCH
-"""def search(request):
+def search_staff(request):
 
-      if  request.GET["camada"]:
+    if request.method == 'POST':
+        searched = request.POST['searched']
 
-	      #respuesta = f"Estoy buscando la camada nro: {request.GET['camada'] }" 
-            camada = request.GET['camada'] 
-            cursos = Curso.objects.filter(camada__icontains=camada)
-
-            return render(request, "AppCoder/inicio.html", {"cursos":cursos, "camada":camada})
-
-      else: 
-
-	      respuesta = "No enviaste datos"
-
-      #No olvidar from django.http import HttpResponse
-      return HttpResponse(respuesta)"""
+        return render(request, "mvt_app/search_result.html",
+                      {'searched':searched})
+    else:
+        return render (request, "mvt_app/index.html")
+        
+def search_result (request):
+    
+    return render(request, "mvt_app/search_result.html")

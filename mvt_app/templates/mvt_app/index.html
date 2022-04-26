@@ -39,10 +39,13 @@
 
    <br><br>
 
-   <a href="/mvt_app/search">
-      <button class="btn btn-primary" type="submit">Search</button>
-   </a>
+   <form action="{% url 'search_result' %}" method="POST" > 
+      {% csrf_token %}
 
+      <input type="Search" class="form" placeholder="search for staff" name="searched">
+      <input type="submit" value="find">
+   </form>
    <br><br>
+
 
 {% endblock  %}
