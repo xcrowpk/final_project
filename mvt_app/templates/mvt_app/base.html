@@ -1,39 +1,4 @@
-{% extends 'mvt_app/base.html' %}
-{% load static %}
-{% block block_index %}
-   WELCOME TO THE MVT_PROJECT
-   <br><br>
-   <a href="/admin">
-        <button class="btn btn-primary" type="submit">Admin</button>
-   </a>
-   <br><br>
-   <a href="/mvt_app/view_clients">
-        <button class="btn btn-primary" type="submit">View Clients</button>
-   </a>
-   <br><br>
-   <a href="/mvt_app/add_clients">
-      <button class="btn btn-primary" type="submit">Add Clients</button>
-   </a>
-   <br><br>
-   <a href="/mvt_app/view_services">
-      <button class="btn btn-primary" type="submit">View Services</button>
-   </a>
-   <br><br>
-   <a href="/mvt_app/staff">
-      <button class="btn btn-primary" type="submit">View Staff</button>
-   </a>
-   <br><br>
-   <a href="/mvt_app/add_staff">
-      <button class="btn btn-primary" type="submit">Add Staff</button>
-   </a>
-   <br><br>
-   <form action="{% url 'search_result' %}" method="POST" > {% csrf_token %}
-      <input type="Search" class="form" placeholder="search for staff" name="searched">
-      <input type="submit" value="find">
-   </form>
-   <br><br>
-{% endblock  %}
-9:45
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -57,14 +22,6 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'index' %}">Index</a>
-                <a class="navbar-brand" href="{% url 'about_us' %}">About us</a>
-                <a class="navbar-brand" href="{% url 'add_clients' %}">Add clients</a>
-                <a class="navbar-brand" href="{% url 'add_staff' %}">Add staff</a>
-                <a class="navbar-brand" href="{% url 'contact_us' %}">Contact us</a>
-                <a class="navbar-brand" href="{% url 'search' %}">Search</a>
-                <a class="navbar-brand" href="{% url 'staff' %}">Staff</a>
-                <a class="navbar-brand" href="{% url 'view_clients' %}">View clients</a>
-                <a class="navbar-brand" href="{% url 'view_services' %}">View services</a>
                 <a class="btn btn-primary" href="#NADAAUN">INICIAR</a>
             </div>
         </nav>

@@ -5,7 +5,7 @@ from mvt_app import views
 
 #aca definimos la direccion URL por la cual accedemos a la vista que armamos, desde el navegador.
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name = 'index'),
     path('add_clients/', views.add_clients, name='add_clients'),
     path('view_services/', views.view_services),
     path('staff/', views.view_staff),
